@@ -25,6 +25,8 @@ build/
 lib/PHPMailer/
 public/lib/PHPMailer-master/
 vendor/
+_config/mail.php
+
 
 # ===== backups =====
 backup/
