@@ -26,13 +26,13 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 try {
     $mail = cosigo_mailer();
 
-    $mail->setFrom('sales@cosigo.io', 'Cosigo Laredo');
-    $mail->addAddress('sales@cosigo.io');   // or laredo@cosigo.io
+    $mail->setFrom('sales@cosigo.io', 'Cosigo Denver');
+    $mail->addAddress('sales@cosigo.io');   // or denver@cosigo.io
     $mail->addReplyTo($email, $name);
 
-    $mail->Subject = "[Cosigo Laredo] " . $subject;
+    $mail->Subject = "[Cosigo Denver] " . $subject;
     $mail->Body =
-        "Satellite: Laredo\n\n" .
+        "Satellite: Denver\n\n" .
         "Name: $name\n" .
         "Email: $email\n\n" .
         $message;
@@ -42,7 +42,7 @@ try {
     echo "OK";
 
 } catch (Exception $e) {
-    error_log("Laredo mail error: " . $e->getMessage());
+    error_log("Denver mail error: " . $e->getMessage());
     http_response_code(500);
     echo "Mail delivery failed.";
 }
