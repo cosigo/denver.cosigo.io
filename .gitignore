@@ -31,3 +31,5 @@ _config/mail.php
 # ===== backups =====
 backup/
 backups/
+
+.vscode/
