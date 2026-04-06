@@ -48,7 +48,6 @@ body::before{
   pointer-events: none;
 }
 
-
 /* =====================================================
   HEADER / BRANDING
 ===================================================== */
@@ -83,6 +82,93 @@ h1{
   margin-right: auto;
 }
 
+.reviewer-download{
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(20,20,20,.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,.72);
+}
+
+.reviewer-actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.reviewer-actions a.reviewer-btn{
+  display: inline-block;
+  padding: .8rem 1.15rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.reviewer-actions a.reviewer-btn-download{
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid rgba(20,20,20,.18) !important;
+}
+
+.reviewer-actions a.reviewer-btn-download:hover{
+  opacity: .94;
+}
+
+.reviewer-actions a.reviewer-btn-logo{
+  background: transparent;
+  color: var(--ink) !important;
+  border: 1px solid rgba(20,20,20,.18);
+}
+
+.reviewer-actions a.reviewer-btn-logo:hover{
+  background: rgba(200,162,74,.08);
+}
+
+/* global button style for both <a> and <button> */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .8rem 1.15rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity .15s ease, transform .15s ease, box-shadow .15s ease;
+}
+
+.btn:hover{
+  opacity: .96;
+  transform: translateY(-1px);
+}
+
+.btn.primary{
+  background: #111;
+  color: #fff;
+  border-color: rgba(20,20,20,.18);
+}
+
+.btn.secondary{
+  background: transparent;
+  color: var(--ink);
+  border-color: rgba(20,20,20,.18);
+}
+
+.btn.secondary:hover{
+  background: rgba(200,162,74,.08);
+}
+
+/* make real buttons match */
+button.btn{
+  appearance: none;
+  -webkit-appearance: none;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
 
 /* =====================================================
   NAVIGATION
